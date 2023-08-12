@@ -1,0 +1,49 @@
+{
+  "name": "dotter",
+  "version": "0.0.1",
+  "description": "Agnostic dotfiles manager",
+  "main": "index.js",
+  "type": "module",
+  "engines": {
+    "node": "^18",
+    "npm": "^9"
+  },
+  "scripts": {
+    "test": "vitest",
+    "test:watch": "npm run test -- --watch",
+    "lint": "eslint --cache --color",
+    "lint:fix": "npm run lint -- --fix",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "start": "node index.js",
+    "install": "npm run start -- --install"
+  },
+  "keywords": [
+    "dotfiles"
+  ],
+  "author": "Jose Gilberto Olivas Ibarra",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "8.46.0",
+    "prettier": "3.0.1",
+    "vitest": "0.34.1"
+  },
+  "dependencies": {
+    "dotenv": "16.3.1",
+    "js-yaml": "4.1.0",
+    "pino": "8.15.0"
+  },
+  "eslintconfig": {
+    "env": {
+      "browser": true,
+      "es2021": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+    },
+    "rules": {}
+  },
+  "prettierconfig": {}
+}
